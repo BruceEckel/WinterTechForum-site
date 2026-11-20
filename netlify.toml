@@ -1,0 +1,6 @@
+[build]
+  command = "pip install uv && uv run build.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.13"

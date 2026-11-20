@@ -8,11 +8,11 @@ price = "$750"
 organizer = "Organized by Bruce Eckel"
 formerly = "Formerly The Java Posse Roundup"
 
-# Where the site is served. For the GitHub Pages preview the site lives under
-# the repository name. For a custom domain, set base = "" and preview = false.
-origin = "https://bruceeckel.github.io"
-base = "/WinterTechForum-site"
-preview = true    # true adds a noindex tag, so search engines skip the preview
+# Where the site is served. On Netlify the build takes the origin from the
+# URL variable that Netlify sets, so this value matters for a local build.
+origin = "https://www.wintertechforum.com"
+base = ""         # A path prefix, for a host that serves the site below the root
+preview = true    # true adds a noindex tag, so search engines skip the trial site
 
 banner = "/images/WinterTechForumBanner.png"
 logo = "/images/wtf-web-nodate.jpg"

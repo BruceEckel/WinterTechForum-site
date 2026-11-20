@@ -6,6 +6,7 @@
 
 import argparse
 import hashlib
+import os
 import re
 import shutil
 import sys
@@ -110,6 +111,7 @@ def build(out: Path = ROOT / "dist", base: str | None = None) -> None:
     site = tomllib.loads(SETTINGS.read_text(encoding="utf-8"))
     if base is not None:
         site["base"] = base
+    site["origin"] = os.environ.get("URL", site["origin"]).rstrip("/")
     prefix: str = site["base"].rstrip("/")
     # A new address for the stylesheet and script each time one changes, so a
     # browser holding the previous copy fetches the current one.

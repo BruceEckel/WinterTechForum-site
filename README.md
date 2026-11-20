@@ -1,7 +1,7 @@
 # Winter Tech Forum web site
 
 A redesign of [WinterTechForum.com](https://www.wintertechforum.com), generated from Markdown by one Python script.
-Preview: <https://bruceeckel.github.io/WinterTechForum-site/>
+Trial site: <https://wintertechforum-site.netlify.app/>
 
 ## Edit
 
@@ -24,7 +24,8 @@ uv run pytest              # Check the build
 
 ## Deploy
 
-A push to `main` runs `.github/workflows/pages.yml`, which tests, builds, and publishes to GitHub Pages.
+Netlify builds and publishes the site on every push to `main`, using the command in `netlify.toml`.
+A GitHub Actions workflow runs the tests on the same push.
 
 ## Layout
 
@@ -38,5 +39,7 @@ A push to `main` runs `.github/workflows/pages.yml`, which tests, builds, and pu
 
 ## Moving to the custom domain
 
-In `site.toml`, set `origin = "https://www.wintertechforum.com"`, `base = ""`, and `preview = false`.
-Add a `static/CNAME` file holding the domain, then point the DNS at GitHub Pages.
+The trial site carries a `noindex` tag. To go live:
+
+1. Set `preview = false` in `site.toml` and push.
+2. In Netlify, move the `www.wintertechforum.com` domain from the old site to this one.

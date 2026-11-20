@@ -21,7 +21,7 @@ We also call it a *retreat*.
 Afternoons are for going outside, or just relaxing.
 Afternoon workshops spontaneously form, usually to explore a technology.
 People go out to lunch and dinner together or make meals in the rental houses.
-We have evening activities: lightning talks, hackday presentations, the popular progressive dinner, and the Friday banquet.
+We have evening activities: lightning talks, hackday presentations, the Monday banquet, and the popular progressive dinner on Friday.
 There are games in the rental houses, and spontaneous conversations always happen.
 From waking to falling into bed, you are only bored if you want to be.
 
