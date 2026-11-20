@@ -53,3 +53,14 @@ def test_home_page_shows_the_index_pages_and_the_dates(dist):
 
 def test_only_markdown_pages_are_published(dist):
     assert not (dist / "welcome-letter" / "convert_to_html.py").exists()
+
+
+def test_no_published_file_exposes_an_email_address(dist):
+    address = re.compile(r"[\w.+-]+@[\w-]+\.[a-z]{2,}|mailto:", re.IGNORECASE)
+    texts = [p for p in dist.rglob("*") if p.suffix in {".html", ".js", ".css", ".xml"}]
+    assert len(texts) > 20
+    for path in texts:
+        assert not address.search(path.read_text(encoding="utf-8")), path
+    for slug in ("contact", "registration"):
+        html = (dist / slug / "index.html").read_text(encoding="utf-8")
+        assert 'class="email-button"' in html

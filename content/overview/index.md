@@ -4,7 +4,7 @@ type: index
 weight: 10
 ---
 
-- We are now holding the conference in the beautiful [Center for The Arts](https://crestedbuttearts.org/), including the evening lightning talks/hackathon day presentations. The opening session and the evening sessions will be in the King Community Room (top floor, north end).
+- We hold the conference in the beautiful [Center for The Arts](https://crestedbuttearts.org/), including the evening lightning talks/hackathon day presentations. The opening session and the evening sessions are in the King Community Room (top floor, north end).
 
 - When scheduling, please [note that there are events](/schedule) the evening of February 28 and the morning of March 6.
 

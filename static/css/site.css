@@ -341,6 +341,17 @@ img { max-width: 100%; height: auto; }
   .toc { display: none; }
 }
 
+.email-button {
+  font: inherit;
+  color: var(--link);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.15rem 0.9rem;
+  cursor: pointer;
+}
+.email-button:hover { border-color: var(--orange); }
+
 /* Previous and next */
 
 .pager {

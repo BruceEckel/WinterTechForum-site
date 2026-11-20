@@ -39,4 +39,30 @@
       localStorage.setItem("theme", root.dataset.theme);
     } catch (e) {}
   });
+
+  // The contact address stays encoded until a visitor asks for it, so a
+  // program that reads the page, or runs its scripts on load, finds no address.
+  var NAME = [73, 121, 124, 106, 108, 91, 76, 106, 114, 108, 115];
+  var HOST = [110, 116, 104, 112, 115, 53, 106, 118, 116];
+
+  function decode(codes) {
+    return codes
+      .map(function (code) {
+        return String.fromCharCode(code - 7);
+      })
+      .join("");
+  }
+
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".email-button"),
+    function (button) {
+      button.addEventListener("click", function () {
+        var address = decode(NAME) + String.fromCharCode(64) + decode(HOST);
+        var link = document.createElement("a");
+        link.href = "mai" + "lto:" + address;
+        link.textContent = address;
+        button.replaceWith(link);
+      });
+    }
+  );
 })();
