@@ -38,4 +38,4 @@ We do our best to provide information via two primary sources:
 
 If you can't find the information on the web site, ask on Slack; It's full of friendly folks who have attended before.
 Slack is also where we communicate during the conference, for pretty much everything.
-If you can't get the answers you need, you can always reply to this email or [email us](https://www.wintertechforum.com/contact/).
+If you can't get the answers you need, you can always [email us](https://www.wintertechforum.com/contact/).
