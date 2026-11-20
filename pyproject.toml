@@ -1,0 +1,17 @@
+[project]
+name = "wintertechforum-site"
+version = "1.0.0"
+description = "Generator for the Winter Tech Forum web site"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2>=3.1",
+    "markdown-it-py>=3.0",
+    "mdit-py-plugins>=0.4",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.uv]
+package = false

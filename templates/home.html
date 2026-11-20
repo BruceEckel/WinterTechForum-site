@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ site.title }}: {{ site.tagline }}{% endblock %}
+{% block main %}
+<section class="hero">
+  <img class="hero-art" src="{{ site.banner }}" width="2000" height="570"
+       alt="{{ site.title }}, Conference &amp; Retreat, Crested Butte, CO">
+  <div class="hero-facts">
+    <h1 class="visually-hidden">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.tagline }}</p>
+    <p class="hero-dates">{{ site.dates }} <span>{{ site.place }}</span></p>
+    <p class="hero-actions">
+      <a class="button large" href="/registration/">Register &middot; {{ site.price }}</a>
+      <a class="button large ghost" href="/schedule/">See the schedule</a>
+    </p>
+    <p class="hero-small">{{ site.organizer }} &middot; {{ site.formerly }}</p>
+  </div>
+</section>
+{% for page in sections %}
+<article class="prose home-section">
+  <h2 class="section-title">{{ page.title }}</h2>
+  {{ page.html }}
+</article>
+{% endfor %}
+{% endblock %}

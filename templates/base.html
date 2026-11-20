@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ site.title }}{% endblock %}</title>
+<meta name="description" content="{{ site.tagline }}, {{ site.dates }} in {{ site.place }}">
+{% if site.preview %}<meta name="robots" content="noindex">
+{% endif %}
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ site.tagline }}, {{ site.dates }} in {{ site.place }}">
+<meta property="og:image" content="{{ site.origin }}{{ site.base }}{{ site.logo }}">
+<meta property="og:type" content="website">
+<link rel="icon" href="{{ site.favicon }}">
+<link rel="stylesheet" href="/css/site.css">
+<script>
+try {
+  var theme = localStorage.getItem("theme");
+  if (theme) document.documentElement.dataset.theme = theme;
+} catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="/">
+      <img src="{{ site.logo }}" alt="" width="36" height="36">
+      <span>{{ site.title }}</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      {% for group in site.nav %}
+      <details class="group">
+        <summary{% for name, url in group["items"] if url == current %} class="here"{% endfor %}>{{ group.group }}</summary>
+        <ul>
+          {% for name, url in group["items"] %}
+          {% if url.startswith("/") %}
+          <li><a href="{{ url }}"{% if url == current %} aria-current="page"{% endif %}>{{ name }}</a></li>
+          {% else %}
+          <li><a href="{{ url }}" target="_blank" rel="noopener">{{ name }} <span aria-hidden="true">&nearr;</span></a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+      <a class="plain" href="/contact/"{% if current == "/contact/" %} aria-current="page"{% endif %}>Contact</a>
+      <a class="button" href="/registration/">Register</a>
+      <button class="theme-button" type="button" aria-label="Switch between light and dark theme">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 0 18V3z"/><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="foot">
+  <div class="foot-inner">
+    <p><strong>{{ site.title }}</strong><br>{{ site.dates }} &middot; {{ site.place }}</p>
+    <p>
+      <a href="/registration/">Registration</a> &middot;
+      <a href="/release-form/">Release Form</a> &middot;
+      <a href="/contact/">Contact</a> &middot;
+      <a href="https://github.com/WinterTechForum">GitHub</a>
+    </p>
+  </div>
+</footer>
+<script src="/js/site.js"></script>
+</body>
+</html>
