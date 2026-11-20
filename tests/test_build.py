@@ -40,7 +40,7 @@ def test_internal_links_carry_the_base_and_resolve(dist):
         html = page.read_text(encoding="utf-8")
         for target in re.findall(r'(?:href|src)="(/[^"]*)"', html):
             assert target.startswith(BASE + "/"), (page, target)
-            path = target.removeprefix(BASE).split("#")[0]
+            path = target.removeprefix(BASE).split("#")[0].split("?")[0]
             found = dist / path.lstrip("/")
             assert found.is_file() or (found / "index.html").is_file(), (page, target)
 
@@ -64,3 +64,9 @@ def test_no_published_file_exposes_an_email_address(dist):
     for slug in ("contact", "registration"):
         html = (dist / slug / "index.html").read_text(encoding="utf-8")
         assert 'class="email-button"' in html
+
+
+def test_stylesheet_and_script_addresses_carry_a_version(dist):
+    html = (dist / "contact" / "index.html").read_text(encoding="utf-8")
+    assert re.search(r'/css/site\.css\?v=[0-9a-f]{10}"', html)
+    assert re.search(r'/js/site\.js\?v=[0-9a-f]{10}"', html)

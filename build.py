@@ -5,6 +5,7 @@
 """
 
 import argparse
+import hashlib
 import re
 import shutil
 import sys
@@ -93,13 +94,14 @@ def finish(html: str, base: str, slugs: set[str], where: str) -> str:
     def rewrite(match: re.Match) -> str:
         attribute, target = match.groups()
         path, mark, fragment = target.partition("#")
+        path, query_mark, query = path.partition("?")
         first = path.strip("/").split("/")[0]
         if first in slugs and not path.endswith("/"):
             path += "/"
         known = first in slugs or first == "" or (STATIC / path[1:]).is_file()
         if not known:
             sys.exit(f"{where}: broken internal link {target}")
-        return f'{attribute}="{base}{path}{mark}{fragment}"'
+        return f'{attribute}="{base}{path}{query_mark}{query}{mark}{fragment}"'
 
     return LINK.sub(rewrite, html)
 
@@ -109,6 +111,10 @@ def build(out: Path = ROOT / "dist", base: str | None = None) -> None:
     if base is not None:
         site["base"] = base
     prefix: str = site["base"].rstrip("/")
+    # A new address for the stylesheet and script each time one changes, so a
+    # browser holding the previous copy fetches the current one.
+    assets = b"".join(p.read_bytes() for p in sorted(STATIC.rglob("*.[cj]s*")))
+    site["version"] = hashlib.sha256(assets).hexdigest()[:10]
     pages = load_pages()
     slugs = {p.slug for p in pages}
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=False)

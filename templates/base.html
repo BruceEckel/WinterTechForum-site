@@ -12,7 +12,7 @@
 <meta property="og:image" content="{{ site.origin }}{{ site.base }}{{ site.logo }}">
 <meta property="og:type" content="website">
 <link rel="icon" href="{{ site.favicon }}">
-<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/site.css?v={{ site.version }}">
 <script>
 try {
   var theme = localStorage.getItem("theme");
@@ -66,6 +66,6 @@ try {
     </p>
   </div>
 </footer>
-<script src="/js/site.js"></script>
+<script src="/js/site.js?v={{ site.version }}"></script>
 </body>
 </html>
