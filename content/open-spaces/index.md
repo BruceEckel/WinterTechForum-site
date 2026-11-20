@@ -94,10 +94,10 @@ To Lead an Open Spaces Discussion
     *Most of the ideas will
     come to you during the event so you don't need to think of them ahead of time*.
 
-- Fill out a Post-It for your topic. Put your name on it so people know who to
-    talk to about it.
+- Post your topic in the conference app. Put your name on it so people know
+    who to talk to about it.
 
-- Place the topic on the schedule.
+- Place the topic in a time slot on the app's schedule.
 
 - If you see topics that have something in common, consider combining them
     into a single time slot by talking to the convener of the other topic(s).
@@ -109,7 +109,7 @@ To Lead an Open Spaces Discussion
 To Attend an Open Spaces Discussion
 -----------------------------------
 
-- Check the board and just show up. It's OK to drop in once the discussion
+- Check the app and just show up. It's OK to drop in once the discussion
     starts.
 
 - Use the **Law of two feet** if the session isn't doing it for you.

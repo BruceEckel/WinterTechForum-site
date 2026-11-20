@@ -11,7 +11,7 @@ Connection and participation.
 We don't have lectures.
 We create discussions.
 If there's something you want to talk about, other people probably want to talk about it too.
-Put it on the board!
+Post it in the conference app!
 
 Sound crazy?
 Can't possibly work?

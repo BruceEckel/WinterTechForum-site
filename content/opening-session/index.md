@@ -15,7 +15,7 @@ weight: 160
 - Open Spaces: creating discussion
   - Bill will demonstrate the app
   - A session can be anything you're interested in, or want to know about. Even if only one person shows up you'll have a discussion.
-  - The online board is the "single point of truth." You can almost always do things with other people if you want. Announce if you're going to breakfast, dinner etc. and use Slack to coordinate.
+  - The app is the "single point of truth." You can almost always do things with other people if you want. Announce if you're going to breakfast, dinner etc. and use Slack to coordinate.
   - Law of two feet: If you're thinking it'll be over soon...
   - Invert your participation mode. Two ears and one mouth.
   - Try not to interrupt BUT if you don't understand something, interrupt and say so. Don't let the discussion get away from you.
