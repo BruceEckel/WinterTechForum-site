@@ -106,7 +106,26 @@ weight: 110
     will deliver you right to the door of your lodging.
 - Because of weather, the Gunnison flight can be unreliable, especially in
     Winter.
-- [Airline tips](https://sites.google.com/site/javaposseroundup/airline-tips).
+- If you fly into Gunnison, you can skip the rental car.
+    Crested Butte is small and walkable.
+
+## Airline Tips
+
+- Search with [Google Flights](https://www.google.com/travel/flights) or
+    [Kayak](https://www.kayak.com/). Both list Southwest and Frontier fares
+    beside those of the other airlines, so one search compares every option.
+- [Frontier](https://www.flyfrontier.com/) is based in Denver, and
+    [Southwest](https://www.southwest.com/) and
+    [United](https://www.united.com/) both have hubs there. You can find a
+    nonstop flight to Denver from most large US cities.
+- United flies from Denver to Gunnison every day. In winter, seasonal nonstop
+    flights also arrive in Gunnison from Dallas
+    ([American](https://www.aa.com/)) and Houston (United). The schedule
+    changes each season, so check the airline's site for your dates.
+- The fare from Denver to Gunnison varies widely with the season. Compare it
+    with the bus or a shared car before you book.
+- From Europe, Lufthansa flies nonstop to Denver from Frankfurt and Munich,
+    and British Airways flies nonstop from London Heathrow.
 
 ## Alternatives
 

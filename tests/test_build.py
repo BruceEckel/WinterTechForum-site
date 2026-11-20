@@ -47,7 +47,7 @@ def test_internal_links_carry_the_base_and_resolve(dist):
 
 def test_home_page_shows_the_index_pages_and_the_dates(dist):
     html = (dist / "index.html").read_text(encoding="utf-8")
-    assert "March 2-6 2026" in html
+    assert "March 1-5, 2027" in html
     assert html.index(">Overview</h2>") < html.index("Welcome to the Winter Tech Forum!</h2>")
 
 
