@@ -19,7 +19,7 @@ skiing, snowshoeing, and snow biking, and can be arranged through the
 
 - **Afternoon Workshops**. People often spontaneously decide to create their
 own workshops to investigate a particular idea or technology. These typically happen at a rental
-house or in my living room (which has a Chromecast-enabled TV). Rooms at [Evolve Coworking](https://www.evolvework.co/) are also usually available.
+house or in my living room (which has a Chromecast-enabled TV).
 
 - **Rest and Recovery**. In case you need to get used to the altitude, or
 to work on your own, or just recover from life.

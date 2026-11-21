@@ -12,8 +12,7 @@ technology.
 All you need is a group that wants to explore a topic. You'll probably start
 forming groups on Monday and Tuesday, as you discover other people's interests.
 
-Hackathon projects take place in rental houses, at Bruce's house, or at [Evolve
-Coworking](https://www.evolvework.co/).
+Hackathon projects take place in rental houses or at Bruce's house.
 
 The evening of the hackathon, results are presented in the *Hackathon Showcase
 Lightning Talks* at 8pm at the King Room of the Center for the Arts.
