@@ -48,7 +48,7 @@ weight: 160
   - Take Ibuprofen if you have the slightest headache, to catch it early.
   - Alcohol is dehydrating, recommend avoiding it if you think you might have altitude issues.
 
-- Code of conduct, contact persons
+- **[Code of conduct](/code-of-conduct)**, contact persons
   - On your badge: Pronouns and whether photos are ok
   - Private feedback, public reflection
     - Would you be interested in some difficult feedback?

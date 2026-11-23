@@ -28,3 +28,7 @@ break on the fee, [make a request](/contact). Don't let the fee be the reason yo
 - *In my experience, the open-spaces forums that Bruce has facilitated have been a great source of new ideas, new friends in the tech world, and a fresh source of inspiration and energy I could apply to my regular work.* -- Joel Neely
 
 - Dianne Marsh's [Summary of the 2016 WTF](http://diannemarsh.com/conference-summary-winter-tech-forum-2016/)
+
+***
+
+**All participants agree to the [Code of Conduct](/code-of-conduct).**
