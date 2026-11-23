@@ -124,3 +124,15 @@ might be helpful:
 3. **Don’t Make Assumptions:** Find the courage to ask questions and to express what you really want. Communicate with others as clearly as you can to avoid misunderstandings, sadness and drama. With just this one agreement, you can completely transform your life.
 
 4. **Always Do Your Best:** Your best changes from moment to moment; it is different when you are healthy as opposed to sick. Under any circumstance, simply do your best, and you will avoid self-judgment, self-abuse, and regret.
+
+## Some Codes of Conduct and Discussions about CoCs
+
+- [PyCon Code of Conduct](https://github.com/python/pycon-code-of-conduct)
+
+- [Conference Code of Conduct](https://confcodeofconduct.com/)
+
+- [Codes of Conduct 101 + FAQ](https://ashedryden.com/blog/codes-of-conduct-101-faq/), by Ashe Dryden
+
+- [Conference anti-harassment policy](https://geekfeminism.fandom.com/wiki/Conference_anti-harassment/Policy), from the Geek Feminism Wiki
+
+- [Responding to reports](https://geekfeminism.fandom.com/wiki/Conference_anti-harassment/Responding_to_reports), from the Geek Feminism Wiki
