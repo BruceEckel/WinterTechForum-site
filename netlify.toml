@@ -1,5 +1,6 @@
 [build]
-  command = "pip install uv && uv run build.py"
+  # The tests run first, so a failing test stops the deploy.
+  command = "pip install uv && uv run pytest -q && uv run build.py"
   publish = "dist"
 
 [build.environment]
@@ -11,3 +12,22 @@
   to = "https://www.wintertechforum.com/:splat"
   status = 301
   force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "frame-ancestors 'none'"
+
+# Each page asks for the stylesheet and script at an address that changes
+# when their contents change, so a browser can keep a copy for a year.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

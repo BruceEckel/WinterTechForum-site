@@ -1,0 +1,35 @@
+name: Links
+
+# Each Monday, request every link from the site to another site. A broken
+# link, or one that now leads to a different site, opens an issue.
+on:
+  schedule:
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Check the links
+        id: check
+        run: uv run tools/check_links.py --report links.md
+        continue-on-error: true
+      - name: Report the failures in an issue
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: Links on the site need attention
+        run: |
+          number=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body-file links.md
+          else
+            gh issue create --title "$TITLE" --body-file links.md
+          fi
