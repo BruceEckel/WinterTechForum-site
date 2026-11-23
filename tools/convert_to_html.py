@@ -5,8 +5,12 @@
 #     "pyperclip",
 # ]
 # ///
+from pathlib import Path
+
 import markdown
 import pyperclip
+
+WELCOME_LETTER = Path(__file__).parent.parent / "content" / "welcome-letter.md"
 
 def strip_frontmatter(markdown_text):
   """
@@ -37,7 +41,7 @@ def convert_to_html(markdown_file):
     markdown_file: Path to the Markdown file.
   """
   try:
-    with open(markdown_file, 'r') as f:
+    with open(markdown_file, 'r', encoding='utf-8') as f:
       markdown_text = f.read()
 
     markdown_text = strip_frontmatter(markdown_text)
@@ -55,4 +59,4 @@ def convert_to_html(markdown_file):
     print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-  convert_to_html("index.md")
+  convert_to_html(WELCOME_LETTER)

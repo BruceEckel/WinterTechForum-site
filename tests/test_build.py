@@ -22,10 +22,11 @@ def pages(dist: Path) -> list[Path]:
 
 
 def test_every_content_page_is_built(dist):
-    sources = list(build.CONTENT.glob("*/index.md"))
+    sources = list(build.CONTENT.glob("*.md"))
     assert len(sources) == 19
+    assert not [p for p in build.CONTENT.iterdir() if p.is_dir()]
     for source in sources:
-        assert (dist / source.parent.name / "index.html").is_file()
+        assert (dist / source.stem / "index.html").is_file()
     assert (dist / "index.html").is_file()
     assert (dist / "404.html").is_file()
 
@@ -52,7 +53,8 @@ def test_home_page_shows_the_index_pages_and_the_dates(dist):
 
 
 def test_only_markdown_pages_are_published(dist):
-    assert not (dist / "welcome-letter" / "convert_to_html.py").exists()
+    assert not list(dist.rglob("*.py"))
+    assert not list(dist.rglob("*.md"))
 
 
 def test_no_published_file_exposes_an_email_address(dist):

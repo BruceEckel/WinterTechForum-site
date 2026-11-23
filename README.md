@@ -5,7 +5,8 @@ Trial site: <https://wintertechforum-site.netlify.app/>
 
 ## Edit
 
-- Each page is `content/<name>/index.md`, with a `title` and a `weight` in its front matter.
+- Each page is `content/<name>.md`, with a `title` and a `weight` in its front matter.
+  The file name is the page's address: `content/schedule.md` becomes `/schedule/`.
   `weight` sets the order of the Previous and Next links.
   A page with `type: index` also appears on the home page.
 - The dates, price, and navigation menu are in `site.toml`.
@@ -33,7 +34,8 @@ A GitHub Actions workflow runs the tests on the same push.
 |---|---|
 | `build.py` | The generator |
 | `site.toml` | Settings and navigation |
-| `content/` | The pages, in Markdown |
+| `content/` | The pages, in Markdown, one file each |
+| `tools/` | A script that copies the welcome letter to the clipboard as HTML for email |
 | `templates/` | Jinja2 page templates |
 | `static/` | CSS, JavaScript, and images, copied as they are |
 

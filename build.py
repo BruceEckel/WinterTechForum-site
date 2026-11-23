@@ -65,7 +65,7 @@ def load_page(source: Path, md: MarkdownIt) -> Page:
         if token.type == "heading_open" and token.tag == "h2"
     ]
     return Page(
-        slug=source.parent.name,
+        slug=source.stem,
         title=meta["title"],
         html=md.renderer.render(tokens, md.options, {}),
         weight=meta.get("weight"),
@@ -76,7 +76,7 @@ def load_page(source: Path, md: MarkdownIt) -> Page:
 
 def load_pages() -> list[Page]:
     md = markdown()
-    pages = [load_page(p, md) for p in sorted(CONTENT.glob("*/index.md"))]
+    pages = [load_page(p, md) for p in sorted(CONTENT.glob("*.md"))]
     ordered = sorted(
         (p for p in pages if p.weight is not None), key=lambda p: p.weight or 0
     )
