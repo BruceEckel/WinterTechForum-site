@@ -14,8 +14,16 @@ origin = "https://www.wintertechforum.com"
 base = ""         # A path prefix, for a host that serves the site below the root
 preview = false   # true adds a noindex tag, so search engines skip a trial site
 
-banner = "/images/WinterTechForumBanner.png"
-logo = "/images/wtf-web-nodate.jpg"
+# The Sunday welcome dinner and the Saturday breakfast fall outside the
+# conference dates. A page shows a value from this file where its text has
+# the setting's name in double braces, as in {{ site.welcome_dinner }}.
+welcome_dinner = "February 28"
+saturday_breakfast = "March 6"
+
+# Images. tools/make_images.py makes the first three from the artwork in art/.
+banner = "/images/wtf-banner.webp"
+logo = "/images/wtf-logo.jpg"
+card = "/images/wtf-card.jpg"     # The picture a shared link shows
 favicon = "/images/wtf-favicon-96.png"
 
 # Navigation. An item is [name, url]; a url that starts with "/" is a page.
@@ -34,6 +42,7 @@ group = "Program"
 items = [
     ["Open Spaces", "/open-spaces/"],
     ["Schedule", "/schedule/"],
+    ["Conference App", "https://app.wintertechforum.com/"],
     ["Lightning Talks", "/lightning/"],
     ["Hackathon", "/hackathon/"],
     ["Afternoon Activities", "/afternoon/"],

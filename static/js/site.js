@@ -26,7 +26,13 @@
   });
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") closeGroups(null);
+    if (event.key !== "Escape") return;
+    closeGroups(null);
+    if (nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.focus();
+    }
   });
 
   document.querySelector(".theme-button").addEventListener("click", function () {
@@ -62,6 +68,7 @@
         link.href = "mai" + "lto:" + address;
         link.textContent = address;
         button.replaceWith(link);
+        link.focus();
       });
     }
   );

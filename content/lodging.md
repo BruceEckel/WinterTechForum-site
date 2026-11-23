@@ -3,7 +3,7 @@ title: Lodging
 weight: 120
 ---
 
-### Group Houses
+## Group Houses
 
 One of the most popular things to do for lodging during the conference is to rent houses
 together. This might or might not be cheaper, but it's generally more fun and
@@ -18,15 +18,15 @@ There's a collection of short-term lodgings in town. They are one block away fro
 <https://www.cbprop.com/academy-place-info/>.
 Pricey, but very nice and with different room options (I saw one room with 4 bunk beds) so the prices could be different depending on the fanciness of the sleeping situation you choose.
 
-### Other Lodging
+## Other Lodging
 
-There are many AirBnB locations available; again, look for *Crested Butte*, not
+There are many Airbnb locations available; look for *Crested Butte*, not
 *Mount Crested Butte*.
 
 Crested Butte has a number of hotels, varying from OK to nice, none of which
-are chains. If you're in a hurry you can just call the Crested Butte Chamber of
-Commerce at (800) 545-4505 and they will help you make a reservation.
-Remember to ask for a reservation *in the town of Crested Butte*, and
+are chains. If you're in a hurry you can call the Crested Butte Chamber of
+Commerce at 970-349-6438 and they can point you to lodging.
+Remember to ask for a place *in the town of Crested Butte*, and
 not on the mountain, in order to be close to the conference location.
 If you do stay on the mountain, the bus runs every 15 minutes between the
 mountain and town.

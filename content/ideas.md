@@ -1,5 +1,6 @@
 ---
 title: Various Ideas and Suggestions
+description: "The organizer's working list of ideas and suggestions for future Winter Tech Forums."
 weight: 170
 ---
 

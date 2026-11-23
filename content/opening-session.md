@@ -1,5 +1,6 @@
 ---
 title: Notes for Opening Session
+description: "The organizer's notes for the opening session of the Winter Tech Forum."
 weight: 160
 ---
 
@@ -13,7 +14,7 @@ weight: 160
 - (Demonstrate recording, start)
 
 - Open Spaces: creating discussion
-  - Bill will demonstrate the app
+  - Bill will demonstrate [the app](https://app.wintertechforum.com/)
   - A session can be anything you're interested in, or want to know about. Even if only one person shows up you'll have a discussion.
   - The app is the "single point of truth." You can almost always do things with other people if you want. Announce if you're going to breakfast, dinner etc. and use Slack to coordinate.
   - Law of two feet: If you're thinking it'll be over soon...

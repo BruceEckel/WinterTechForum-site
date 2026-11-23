@@ -4,7 +4,7 @@ weight: 130
 ---
 
 > **The [local urgent-care clinic](https://www.gunnisonvalleyhealth.org/Our-Services/Mountain-Clinic.aspx)**
-> **is in Mount Crested Butte, open every day from 9 am to 5 pm. They accept most insurance.**
+> **is in Mount Crested Butte, open every day from 9am to 5pm. They accept most insurance.**
 
 ---
 
@@ -24,7 +24,7 @@ Maybe it does; it's "alternative" so you never know for sure.
 3. Apply sunscreen to any exposed parts of skin. Without it, you won't get
 tanned, you'll get burned, and it can happen when you least expect it.
 Ideally, do it when you get out of the shower. And if you are skiing in the
-mid-day, put sunscreen inside the exposed parts your nostrils to avoid a
+mid-day, put sunscreen inside the exposed parts of your nostrils to avoid a
 particularly painful burn.
 
 4. Nasal comfort: It's super dry at altitude and that messes with your nasal

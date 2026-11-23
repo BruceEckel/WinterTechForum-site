@@ -1,5 +1,6 @@
 ---
 title: Contact
+description: "How to reach the organizer of the Winter Tech Forum with a problem or a question."
 weight: 150
 ---
 

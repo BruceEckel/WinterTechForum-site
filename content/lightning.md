@@ -11,7 +11,7 @@ computers.
 
 There will be a sheet in the Center for you to add your name if you'd
 like to give a talk. You might feel reluctant at first and want to take a
-"wait and see" attitude. Don't wait--lightning talk slots often fill up early
+"wait and see" attitude. Don't wait---lightning talk slots often fill up early
 and when you see how casual and fun they are you'll be sorry if you miss out.
 
 The five-minute limit is enforced by a timer; when the timer goes off the

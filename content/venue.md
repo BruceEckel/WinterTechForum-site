@@ -1,5 +1,6 @@
 ---
 title: Venue
+description: "The Winter Tech Forum meets at the Crested Butte Center for the Arts. The Monday banquet is at the Crested Butte Museum."
 weight: 100
 ---
 

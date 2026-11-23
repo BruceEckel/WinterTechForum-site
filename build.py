@@ -17,6 +17,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Thread
+from typing import NoReturn
 
 import yaml
 from jinja2 import Environment, FileSystemLoader
@@ -29,6 +30,10 @@ TEMPLATES = ROOT / "templates"
 STATIC = ROOT / "static"
 SETTINGS = ROOT / "site.toml"
 TOC_MINIMUM = 3  # A page shows "On this page" when it has this many H2s
+DESCRIPTION_LIMIT = 155  # Search results show about this many characters
+PAGE_SETTINGS = ("title", "weight", "type", "description")  # What a page's front matter can hold
+SLUG = re.compile(r"[a-z0-9]+(-[a-z0-9]+)*")
+SITE_VALUE = re.compile(r"\{\{\s*site\.(\w+)\s*\}\}")
 
 
 @dataclass
@@ -36,6 +41,7 @@ class Page:
     slug: str
     title: str
     html: str
+    description: str = ""
     weight: int | None = None
     on_home: bool = False
     toc: list[tuple[str, str]] = field(default_factory=list)
@@ -54,29 +60,105 @@ def markdown() -> MarkdownIt:
     return md
 
 
-def load_page(source: Path, md: MarkdownIt) -> Page:
-    text = source.read_text(encoding="utf-8")
-    _, front, body = text.split("---", 2)
-    meta = yaml.safe_load(front)
-    tokens = md.parse(body)
+def stop(source: Path, problem: str) -> NoReturn:
+    """End the build with a message that states the page and what is wrong."""
+    sys.exit(f"content/{source.name}: {problem}")
+
+
+def plain(inline) -> str:
+    """The words of a heading or paragraph, with the Markdown marks removed."""
+    parts = []
+    for child in inline.children or []:
+        if child.type in ("text", "code_inline"):
+            parts.append(child.content)
+        elif child.type in ("softbreak", "hardbreak"):
+            parts.append(" ")
+    return " ".join("".join(parts).split())
+
+
+def summary(tokens) -> str:
+    """The opening words of a page, for its description in search results."""
+    words = ""
+    for before, token in zip(tokens, tokens[1:]):
+        if before.type == "paragraph_open" and token.type == "inline":
+            words = f"{words} {plain(token)}".strip()
+            if len(words) >= DESCRIPTION_LIMIT // 2:
+                break
+    if len(words) <= DESCRIPTION_LIMIT:
+        return words
+    return words[:DESCRIPTION_LIMIT].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def front_matter(source: Path) -> tuple[dict, str]:
+    """Split a page into its settings and its Markdown, checking the settings."""
+    if not SLUG.fullmatch(source.stem):
+        stop(
+            source,
+            "rename the file using lowercase letters, digits, and hyphens. "
+            "The file name becomes the page's address.",
+        )
+    lines = source.read_text(encoding="utf-8-sig").splitlines()
+    if not lines or lines[0].strip() != "---":
+        stop(
+            source,
+            "the file must start with its settings: a line of ---, "
+            "then title: and any other settings, then another line of ---",
+        )
+    closing = next((i for i, line in enumerate(lines[1:], 1) if line.strip() == "---"), None)
+    if closing is None:
+        stop(source, "the settings at the top have no closing line of ---")
+    try:
+        meta = yaml.safe_load("\n".join(lines[1:closing]))
+    except yaml.YAMLError as error:
+        mark = getattr(error, "problem_mark", None)
+        where = f"line {mark.line + 2}" if mark else "the settings at the top"
+        stop(
+            source,
+            f"{where} is not a valid setting ({getattr(error, 'problem', error)}). "
+            'A value that contains a colon needs quotes, as in title: "Wednesday: Hackathon"',
+        )
+    if not isinstance(meta, dict) or meta.get("title") is None:
+        stop(source, "the settings at the top need a title: line")
+    unknown = sorted(str(name) for name in set(meta) - set(PAGE_SETTINGS))
+    if unknown:
+        stop(source, f"unknown setting {', '.join(unknown)}. The settings are {', '.join(PAGE_SETTINGS)}")
+    weight = meta.get("weight")
+    if weight is not None and (isinstance(weight, bool) or not isinstance(weight, int)):
+        stop(source, "weight must be a whole number, as in weight: 40")
+    if meta.get("type") not in (None, "index"):
+        stop(source, "type can be index, which puts the page on the home page, or be left out")
+    return meta, "\n".join(lines[closing + 1 :])
+
+
+def load_page(source: Path, md: MarkdownIt, site: dict) -> Page:
+    meta, body = front_matter(source)
+
+    def site_value(match: re.Match) -> str:
+        name = match.group(1)
+        if isinstance(site.get(name), (str, int, float)):
+            return str(site[name])
+        stop(source, f"{match.group(0)} matches no setting in site.toml")
+
+    tokens = md.parse(SITE_VALUE.sub(site_value, body))
     toc = [
-        (str(token.attrGet("id")), tokens[i + 1].content)
+        (str(token.attrGet("id")), plain(tokens[i + 1]))
         for i, token in enumerate(tokens)
         if token.type == "heading_open" and token.tag == "h2"
     ]
     return Page(
         slug=source.stem,
-        title=meta["title"],
+        title=str(meta["title"]),
         html=md.renderer.render(tokens, md.options, {}),
+        description=" ".join(str(meta.get("description") or summary(tokens)).split()),
         weight=meta.get("weight"),
         on_home=meta.get("type") == "index",
         toc=toc if len(toc) >= TOC_MINIMUM else [],
     )
 
 
-def load_pages() -> list[Page]:
+def load_pages(site: dict) -> list[Page]:
     md = markdown()
-    pages = [load_page(p, md) for p in sorted(CONTENT.glob("*.md"))]
+    pages = [load_page(p, md, site) for p in sorted(CONTENT.glob("*.md"))]
     ordered = sorted(
         (p for p in pages if p.weight is not None), key=lambda p: p.weight or 0
     )
@@ -117,7 +199,7 @@ def build(out: Path = ROOT / "dist", base: str | None = None) -> None:
     # browser holding the previous copy fetches the current one.
     assets = b"".join(p.read_bytes() for p in sorted(STATIC.rglob("*.[cj]s*")))
     site["version"] = hashlib.sha256(assets).hexdigest()[:10]
-    pages = load_pages()
+    pages = load_pages(site)
     slugs = {p.slug for p in pages}
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=False)
 
@@ -137,7 +219,13 @@ def build(out: Path = ROOT / "dist", base: str | None = None) -> None:
     write("index.html", "home.html", sections=home, current="/")
     write("404.html", "404.html", current="")
     for page in pages:
-        write(f"{page.slug}/index.html", "page.html", page=page, current=page.url)
+        write(
+            f"{page.slug}/index.html",
+            "page.html",
+            page=page,
+            current=page.url,
+            description=page.description,
+        )
 
     root = site["origin"] + prefix
     locations = [f"{root}/"] + [f"{root}{p.url}" for p in pages]
@@ -149,6 +237,10 @@ def build(out: Path = ROOT / "dist", base: str | None = None) -> None:
         encoding="utf-8",
         newline="\n",
     )
+    # A trial copy asks search engines to stay away; the live site points
+    # them to the sitemap.
+    rules = "Disallow: /\n" if site.get("preview") else f"Allow: /\n\nSitemap: {root}/sitemap.xml\n"
+    (out / "robots.txt").write_text(f"User-agent: *\n{rules}", encoding="utf-8", newline="\n")
     print(f"Built {len(pages)} pages into {out}")
 
 

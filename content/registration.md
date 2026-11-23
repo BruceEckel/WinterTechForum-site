@@ -1,5 +1,6 @@
 ---
 title: Registration
+description: "How to register for the Winter Tech Forum: join the conference Slack, pay the fee, and sign the activity release form."
 weight: 140
 ---
 

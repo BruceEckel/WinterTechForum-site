@@ -1,5 +1,6 @@
 ---
 title: Schedule
+description: "The Winter Tech Forum day by day: morning Open Spaces sessions, free afternoons, lightning talks, the hackathon, and the dinners."
 weight: 40
 ---
 

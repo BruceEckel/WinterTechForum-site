@@ -1,5 +1,6 @@
 ---
 title: PARTICIPANT'S ACKNOWLEDGMENT OF RISK
+description: "The activity release form that each Winter Tech Forum participant prints, signs, and brings to the conference."
 ---
 
 In consideration of the services of Bruce Eckel and MindView, Inc., their officers, agents, employees, and stockholders, and all other entities associated with those businesses (hereinafter collectively referred to as "MindView"), I agree as follows:

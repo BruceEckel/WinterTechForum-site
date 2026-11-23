@@ -9,7 +9,7 @@ these look like pure recreation, we have some of our most interesting
 discussions once the structure and constraints are completely removed.
 
 - **Skiing**. The schedule allows you to purchase
-a 1/2 day afternoon pass. Skiing is completely optional, and is your
+a half-day afternoon pass. Skiing is completely optional, and is your
 responsibility, although groups are likely to form. See
 [www.skicb.com](https://www.skicb.com/) for more information.
 

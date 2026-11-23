@@ -11,7 +11,7 @@ Connection and participation.
 We don't have lectures.
 We create discussions.
 If there's something you want to talk about, other people probably want to talk about it too.
-Post it in the conference app!
+Post it in the [conference app](https://app.wintertechforum.com/)!
 
 Sound crazy?
 Can't possibly work?
@@ -36,6 +36,6 @@ We do our best to provide information via two primary sources:
 1. [The web site](/)
 2. [The conference Slack](https://join.slack.com/t/wtfconf/shared_invite/zt-303widqu9-3n_LHLFmm6IvZygHpXLoiQ)
 
-If you can't find the information on the web site, ask on Slack; It's full of friendly folks who have attended before.
+If you can't find the information on the web site, ask on Slack; it's full of friendly folks who have attended before.
 Slack is also where we communicate during the conference, for pretty much everything.
 If you can't get the answers you need, you can always [email us](/contact/).

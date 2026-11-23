@@ -1,25 +1,26 @@
 ---
 title: Center for the Arts Conference Usage
+description: "The rooms and hours the Winter Tech Forum uses at the Crested Butte Center for the Arts."
 ---
 
-### Monday
+## Monday
 
 - **9am** to **12:30pm** (King, Hawk, Jones, Art)
 
 
-### Tuesday
+## Tuesday
 
 - **9am** to **12:30pm** (King, Hawk, Jones, Art)
 - **8pm** to **10:00pm** (King)
 
-### Wednesday
+## Wednesday
 
 - **8pm** to **10:30pm** (King)
 
-### Thursday
+## Thursday
 
 - **9am** to **12:30pm** (King, Hawk, Jones, Art)
 - **8pm** to **10:00pm** (King)
-### Friday
+## Friday
 
 - **9am** to **12:30pm** (King, Hawk, Jones, Art)

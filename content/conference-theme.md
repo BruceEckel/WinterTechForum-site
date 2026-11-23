@@ -45,7 +45,7 @@ Session Topics from Previous Conferences
 - Job Offer Negotiation
 - Kubernetes
 - Lambdas or Longer (Serverless)
-- Low Level Programing Tips & Tricks
+- Low Level Programming Tips & Tricks
 - Machine Learning Framework (Image Recognition)
 - Microservices: When are they Macroservices?
 - Navigating from Proprietary to Open Source

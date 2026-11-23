@@ -13,7 +13,7 @@ of listening to eyes-forward presentations.
 Open Spaces is a simple methodology to create a self-organizing conference.
 It relies on participation by people who have a passion for the topics
 to be discussed. There is no preplanned list of topics, only time slots
-and the conference app, where interested participants
+and the [conference app](https://app.wintertechforum.com/), where interested participants
 propose topics and pick time slots.
 
 Open Spaces conferences have also been called *Unconferences*.
@@ -80,7 +80,7 @@ feel free to move on to something else:
 - Take a walk, or a nap.
 
 In an Open Spaces conference it is decidedly *not* rude to get up and leave
-(although it might take awhile for you to get used to doing it). On the
+(although it might take a while for you to get used to doing it). On the
 contrary, if you are in a session and disengaged, you are sucking energy out
 of the room — in that case you're actually helping by using the law of two
 feet.

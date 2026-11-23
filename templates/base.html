@@ -4,13 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ site.title }}{% endblock %}</title>
-<meta name="description" content="{{ site.tagline }}, {{ site.dates }} in {{ site.place }}">
+{% set summary = (description or (site.tagline ~ ", " ~ site.dates ~ " in " ~ site.place))|e %}
+<meta name="description" content="{{ summary }}">
 {% if site.preview %}<meta name="robots" content="noindex">
 {% endif %}
+{% if current %}<link rel="canonical" href="{{ site.origin }}{{ site.base }}{{ current }}">
+<meta property="og:url" content="{{ site.origin }}{{ site.base }}{{ current }}">
+{% endif %}
 <meta property="og:title" content="{{ self.title() }}">
-<meta property="og:description" content="{{ site.tagline }}, {{ site.dates }} in {{ site.place }}">
-<meta property="og:image" content="{{ site.origin }}{{ site.base }}{{ site.logo }}">
+<meta property="og:description" content="{{ summary }}">
+<meta property="og:image" content="{{ site.origin }}{{ site.base }}{{ site.card }}">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{{ site.favicon }}">
 <link rel="stylesheet" href="/css/site.css?v={{ site.version }}">
 <script>
@@ -26,7 +31,7 @@ try {
   <div class="bar-inner">
     <a class="brand" href="/">
       <img src="{{ site.logo }}" alt="" width="36" height="36">
-      <span>{{ site.title }}</span>
+      <span>{{ site.title|e }}</span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Main">
