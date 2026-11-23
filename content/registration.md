@@ -10,8 +10,8 @@ instruction can be arranged. There is also cross-country skiing
 - REGISTER EARLY: This helps us plan
 
 ## Step 1 
-Join the [Winter Tech Forum Slack channel](https://join.slack.com/t/wtfconf/shared_invite/enQtNDk5MjUyMTc4MjkxLWUzMjkxNDM1MGM3MDU2MDJhYTRlODY5MjljOWNlYmQyMmNkMGRmMzlhMWE1ZmQ4NmIyY2JmODhkNWI0NDIyM2Y).
-You can post questions to the Slack channel, arrange ride sharing, group house
+Join the [conference Slack](https://join.slack.com/t/wtfconf/shared_invite/zt-303widqu9-3n_LHLFmm6IvZygHpXLoiQ).
+You can post questions on Slack, arrange ride sharing, group house
 rentals, etc.
 
 ## Step 2

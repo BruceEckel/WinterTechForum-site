@@ -15,17 +15,17 @@ weekend; informal gatherings have been known to happen.
 Sunday 6:00pm
 -------------
 
-Welcome dinner at Bruce's House (107 WhiteRock). We'll have food, but if
+Welcome dinner at Bruce's House (107 Whiterock). We'll have food, but if
 you have a favorite beverage you might want to bring that.
 
-Go to the corner of First and WhiteRock, and you'll see a building of four
+Go to the corner of First and Whiterock, and you'll see a building of four
 townhomes with solar panels on the roof. My unit is the furthest away from
 the corner, and you'll see a little white cargo trailer in front. I usually
 have colorful lights on, as well.
 
 ***********************************
 
-> All Conference Sessions, Lightning Talks, and the Hackday Showcase Lightning Talks are held at the Center for the Arts (CTA)
+> All Conference Sessions, Lightning Talks, and the Hackathon Showcase Lightning Talks are held at the Center for the Arts (CTA)
 
 Monday
 ------
@@ -141,4 +141,4 @@ Saturday Morning Potluck Breakfast at Bruce's house
 
 - If you don't have extra food, don't buy more. We always have lots.
 
-- Airport shuttles & group drivers can pick you up there (tell them 107 White Rock).
+- Airport shuttles & group drivers can pick you up there (tell them 107 Whiterock).

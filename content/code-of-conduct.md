@@ -3,7 +3,7 @@ title: Code of Conduct
 weight: 25
 ---
 
-The Winter Tech Forum is about discussion,
+This conference is about discussion,
 inclusion and connection, and we want everyone to feel as comfortable as
 possible. Although we cannot guarantee you will have a good time, we can
 certainly do our best to make sure you don't have a *bad* time, and the
@@ -32,7 +32,7 @@ without a refund at the discretion of the conference organizers.
 
 ## Points of Contact
 
-We recognize that managing harassment at the Winter Tech Forum is not the job
+We recognize that managing harassment at this conference is not the job
 of its recipients. The conference organizer and delegated individuals (*contact
 persons*) will make themselves available to address any & all complaints of
 harassment, and the relevant contact information for them will be
@@ -82,7 +82,7 @@ but it doesn't say what you must do (speak a certain way).
 
 ## If You are Having a Hard Time Communicating
 
-These [Principles of Nonviolent Communication](https://www.cnvc.org/Training/NVC-Concepts)
+These [Principles of Nonviolent Communication](https://www.cnvc.org/learn/what-is-nvc)
 might be helpful:
 
 1.  Differentiate observation from evaluation.

@@ -38,12 +38,12 @@ weight: 110
     NOTE: This often makes the tickets much cheaper.
 
 1. Take the [Light Rail from Denver Airport to Union
-    Station](https://www.denver.org/about-denver/transportation/airport-rail/)
+    Station](https://visitdenver.com/about-denver/transportation/denver-airport-rail/)
     ($10.50). This is just under a 40-minute ride, and leaves every few minutes.
     It terminates at Union Station so there's no risk you will miss your stop.
 
 1. Take the [Bustang Outrider from Union Station to Crested Butte](
-    https://ridebustang.com/outrider/schedules/crested-butte-denver/) ($45).
+    https://ridebustang.com/routes/) ($45).
     This is a very comfortable bus with power outlets and WiFi (Might work for
     streaming but best to download). You can only buy tickets with their phone
     app, so it's worth installing it and buying one ahead of time. Don't

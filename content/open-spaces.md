@@ -13,12 +13,12 @@ of listening to eyes-forward presentations.
 Open Spaces is a simple methodology to create a self-organizing conference.
 It relies on participation by people who have a passion for the topics
 to be discussed. There is no preplanned list of topics, only time slots
-and a space in the main meeting room where interested participants
+and the conference app, where interested participants
 propose topics and pick time slots.
 
 Open Spaces conferences have also been called *Unconferences*.
 
-## [View a brief screencast about Open Spaces](https://youtu.be/aD3S0wlbek0)
+**[View a brief screencast about Open Spaces](https://youtu.be/aD3S0wlbek0)**
 
 Open Spaces have been used for conferences and as a facilitation technique
 for company meetings, community organizations, and other groups that

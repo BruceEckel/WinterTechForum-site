@@ -1,6 +1,5 @@
 ---
 title: Center for the Arts Conference Usage
-outputs: ["html"]
 ---
 
 ### Monday

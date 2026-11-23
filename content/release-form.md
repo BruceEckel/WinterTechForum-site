@@ -1,6 +1,5 @@
 ---
 title: PARTICIPANT'S ACKNOWLEDGMENT OF RISK
-outputs: ["html"]
 ---
 
 In consideration of the services of Bruce Eckel and MindView, Inc., their officers, agents, employees, and stockholders, and all other entities associated with those businesses (hereinafter collectively referred to as "MindView"), I agree as follows:

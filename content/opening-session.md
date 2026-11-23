@@ -3,7 +3,7 @@ title: Notes for Opening Session
 weight: 160
 ---
 
-- These notes can be found under "opening" at the bottom of the WTF site sidebar
+- These notes can be found under "Opening" in the Organizer menu of this site
 
 - Wifi password
 - Bathrooms: more as you go down

@@ -5,12 +5,14 @@
 #     "pyperclip",
 # ]
 # ///
+import re
 from pathlib import Path
 
 import markdown
 import pyperclip
 
-WELCOME_LETTER = Path(__file__).parent.parent / "content" / "welcome-letter.md"
+SITE = "https://www.wintertechforum.com"
+WELCOME_LETTER =Path(__file__).parent.parent / "content" / "welcome-letter.md"
 
 def strip_frontmatter(markdown_text):
   """
@@ -45,7 +47,9 @@ def convert_to_html(markdown_file):
       markdown_text = f.read()
 
     markdown_text = strip_frontmatter(markdown_text)
-    markdown_text = markdown_text.replace("---", "—") 
+    markdown_text = markdown_text.replace("---", "—")
+    # A link that starts at the site root works on the site; email needs the full address.
+    markdown_text = re.sub(r"\]\((/[^)]*)\)", rf"]({SITE}\1)", markdown_text)
 
     html_text = markdown.markdown(markdown_text)
 
