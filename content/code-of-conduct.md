@@ -7,7 +7,7 @@ The [Winter Tech Forum](/) is about discussion,
 inclusion and connection, and we want everyone to feel as comfortable as
 possible. Although we cannot guarantee you will have a good time, we can
 certainly do our best to make sure you don't have a *bad* time, and the
-baseline for this is that no one should ever be harrassed.
+baseline for this is that no one should ever be harassed.
 
 To achieve this goal, all participants, sponsors and volunteers at our event
 are required to agree with this code of conduct (CoC). Organizers will enforce
@@ -52,7 +52,7 @@ can expect that:
    organizer and the person in question, to stop the behavior in question
    and possibly include a warning to that person.
 
-If you're not sure that behavior counts as harrassment, please reach out to any
+If you're not sure that behavior counts as harassment, please reach out to any
 contact person. We are happy to talk it over with you.
 
 ## Our Goal for this CoC
