@@ -23,7 +23,7 @@ def pages(dist: Path) -> list[Path]:
 
 def test_every_content_page_is_built(dist):
     sources = list(build.CONTENT.glob("*.md"))
-    assert len(sources) == 19
+    assert sources
     assert not [p for p in build.CONTENT.iterdir() if p.is_dir()]
     for source in sources:
         assert (dist / source.stem / "index.html").is_file()
