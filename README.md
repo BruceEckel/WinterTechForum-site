@@ -1,7 +1,6 @@
 # Winter Tech Forum web site
 
-A redesign of [WinterTechForum.com](https://www.wintertechforum.com), generated from Markdown by one Python script.
-Trial site: <https://wintertechforum-site.netlify.app/>
+The source of [WinterTechForum.com](https://www.wintertechforum.com), generated from Markdown by one Python script.
 
 ## Edit
 
@@ -39,9 +38,8 @@ A GitHub Actions workflow runs the tests on the same push.
 | `templates/` | Jinja2 page templates |
 | `static/` | CSS, JavaScript, and images, copied as they are |
 
-## Moving to the custom domain
+## Domain
 
-The trial site carries a `noindex` tag. To go live:
-
-1. Set `preview = false` in `site.toml` and push.
-2. In Netlify, move the `www.wintertechforum.com` domain from the old site to this one.
+The Netlify site `wintertechforum-site` serves `www.wintertechforum.com`, and Netlify DNS holds the domain's records.
+`netlify.toml` redirects the site's `netlify.app` address to the custom domain.
+Setting `preview = true` in `site.toml` adds a `noindex` tag to every page, for a trial copy that search engines should skip.

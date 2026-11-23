@@ -12,7 +12,7 @@ formerly = "Formerly The Java Posse Roundup"
 # URL variable that Netlify sets, so this value matters for a local build.
 origin = "https://www.wintertechforum.com"
 base = ""         # A path prefix, for a host that serves the site below the root
-preview = true    # true adds a noindex tag, so search engines skip the trial site
+preview = false   # true adds a noindex tag, so search engines skip a trial site
 
 banner = "/images/WinterTechForumBanner.png"
 logo = "/images/wtf-web-nodate.jpg"

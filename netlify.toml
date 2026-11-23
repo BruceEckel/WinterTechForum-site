@@ -4,3 +4,10 @@
 
 [build.environment]
   PYTHON_VERSION = "3.13"
+
+# Send the Netlify address to the custom domain, so the site has one address.
+[[redirects]]
+  from = "https://wintertechforum-site.netlify.app/*"
+  to = "https://www.wintertechforum.com/:splat"
+  status = 301
+  force = true
