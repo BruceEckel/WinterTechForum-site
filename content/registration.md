@@ -10,15 +10,15 @@ instruction can be arranged. There is also cross-country skiing
 
 - REGISTER EARLY: This helps us plan
 
-## Step 1 
+## Step 1
 Join the [conference Slack](https://join.slack.com/t/wtfconf/shared_invite/zt-303widqu9-3n_LHLFmm6IvZygHpXLoiQ).
 You can post questions on Slack, arrange ride sharing, group house
 rentals, etc.
 
 ## Step 2
-[Payment](https://link.waveapps.com/2ep8jy-4tc6fx)
+[Payment](https://link.waveapps.com/3r77vm-tch7p9)
 
-## Step 3 
+## Step 3
 Print and sign the [Activity Release Form](/release-form) and bring it with you (Forms will also be available on site)
 
 ----------------------------------------------------------
